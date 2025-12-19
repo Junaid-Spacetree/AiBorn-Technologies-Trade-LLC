@@ -1,0 +1,68 @@
+/* ---------------------
+   [Master Stylesheet]
+   Template Name: Softora - IT Solutions & Technology HTML Template
+   Version: 1.0.0
+   Author: Nano Theme
+--------------------- */
+
+/* ---------------------
+   [Table of Contents]
+
+   1. Global Elements
+      1.1 Responsive Breakpoint (rs)
+      1.2 Color Variables (color)
+      1.3 Reboot (reboot)
+   2. UI Components
+      2.1 Miscellaneous (miscellaneous)
+      2.2 Preloader (preloader)
+      2.3 Jarallax (jarallax)
+   3. Sections
+      3.1 Header (header)
+      3.2 Footer (footer)
+      3.3 Hero (hero)
+      3.4 About (about)
+      3.5 Services (service)
+      3.6 Pricing (pricing)
+      3.8 Team (team)
+      3.9 Partner (partner)
+      3.10 Showcase (showcase)
+      3.11 Testimonial (testimonial)
+      3.12 Video (video)
+      3.13 Blog (blog)
+      3.14 CTA (cta)
+      3.16 Contact (contact)
+      3.18 Process (process)
+   4. Auxiliary
+      4.1 Cookie (cookie)
+      4.2 FAQ (faq)
+      4.3 Breadcrumb (breadcrumb)
+      4.4 Theming (theme)
+--------------------- */
+
+@use 'color';
+@use 'rs';
+@use 'reboot';
+@use 'miscellaneous';
+@use 'preloader';
+@use 'jarallax';
+@use 'header';
+@use 'footer';
+@use 'hero';
+@use 'about';
+@use 'service';
+@use 'pricing';
+@use 'team';
+@use 'partner';
+@use 'showcase';
+@use 'testimonial';
+@use 'video';
+@use 'blog';
+@use 'cta';
+@use 'contact';
+@use 'process';
+@use 'cookie';
+@use 'faq';
+@use 'breadcrumb';
+@use 'theme';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');

@@ -1,0 +1,224 @@
+@use 'rs';
+@use 'color';
+
+/* About CSS */
+
+.about-images {
+   img {
+      border-radius: 50%;
+   }
+}
+
+.about-list {
+   .icon {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: color.$primary;
+      color: color.$white;
+
+      i {
+         font-size: 24px;
+      }
+   }
+
+   h5 {
+      font-weight: 400;
+   }
+
+   &.style-two {
+
+      li {
+         @media #{rs.$bp-sm} {
+            flex: 0 0 calc(50% - 1.5rem);
+            width: calc(50% - 1.5rem);
+            max-width: calc(50% - 1.5rem);
+         }
+      }
+
+      h5 {
+         font-size: 18px;
+      }
+   }
+}
+
+.about-video-content {
+   position: relative;
+   border-radius: 300px;
+
+   img {
+      border-radius: 300px;
+   }
+
+   .play-video-btn {
+      .icon {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 48px;
+         height: 48px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: color.$primary;
+         color: color.$white;
+         transition: all 0.3s;
+         cursor: pointer;
+
+         @media #{rs.$bp-xl} {
+            width: 74px;
+            height: 74px;
+         }
+
+         i {
+            font-size: 24px;
+         }
+
+         &:hover,
+         &:focus {
+            background-color: color.$bg;
+         }
+      }
+   }
+}
+
+.about-section {
+   position: relative;
+   z-index: 1;
+
+   .right-shape>img {
+      position: absolute;
+      bottom: 20%;
+      right: 0;
+      z-index: -10;
+   }
+}
+
+.about-thumbnail {
+   position: relative;
+   z-index: 1;
+   width: 100%;
+
+   .shape1>img {
+      position: absolute;
+      top: 2rem;
+      right: 0;
+      max-width: 100%;
+      width: auto;
+      height: calc(100% - 2rem);
+      z-index: -10;
+      object-fit: cover;
+   }
+
+   .about-big-img {
+      width: 270px;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 15px solid color.$white;
+      box-shadow: 0px 4.914px 30.714px 0px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+
+      @media #{rs.$bp-sm} {
+         width: 400px;
+         height: 400px;
+      }
+
+      @media #{rs.$bp-md} {
+         width: 500px;
+         height: 500px;
+      }
+
+      @media #{rs.$bp-lg} {
+         width: 400px;
+         height: 400px;
+      }
+
+      @media #{rs.$bp-xxl} {
+         width: 500px;
+         height: 500px;
+      }
+   }
+
+   .about-video-content {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 10px solid color.$white;
+      box-shadow: 0px 4.914px 30.714px 0px rgba(0, 0, 0, 0.06);
+      position: absolute;
+      right: 5%;
+      bottom: 0;
+      z-index: 10;
+
+      @media #{rs.$bp-sm} {
+         width: 300px;
+         height: 300px;
+         right: 0;
+      }
+
+      @media #{rs.$bp-md} {
+         width: 348px;
+         height: 348px;
+      }
+
+      @media #{rs.$bp-lg} {
+         width: 270px;
+         height: 270px;
+      }
+
+      @media #{rs.$bp-xxl} {
+         width: 348px;
+         height: 348px;
+      }
+
+      .play-video-btn {
+         .icon {
+            width: 62px;
+            height: 62px;
+            background-color: color.$white;
+            color: color.$primary;
+
+            &::after {
+               content: '';
+               position: absolute;
+               top: -5px;
+               left: -5px;
+               width: calc(100% + 10px);
+               height: calc(100% + 10px);
+               border-radius: 50%;
+               border: 1.229px solid color.$white;
+               background-color: transparent;
+            }
+
+            &::before {
+               content: '';
+               position: absolute;
+               top: -12px;
+               left: -12px;
+               width: calc(100% + 24px);
+               height: calc(100% + 24px);
+               border-radius: 50%;
+               border: 1.229px solid color.$white;
+               background-color: transparent;
+            }
+
+            i {
+               font-size: 20px;
+            }
+
+            &:hover,
+            &:focus {
+               background-color: color.$primary;
+               color: color.$white;
+            }
+         }
+      }
+   }
+}

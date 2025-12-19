@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Softora - IT Solutions & Technology HTML Template">
+
+   <!-- Title & Favicon -->
+   <title>Pricing | Softora - IT Solutions & Technology HTML Template</title>
+   <link rel="shortcut icon" href="assets/img/core-img/favicon.ico" type="image/x-icon">
+
+   <!-- Stylesheet -->
+   <link rel="stylesheet" href="assets/css/animate.css">
+   <link rel="stylesheet" href="assets/css/tabler-icons.min.css">
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <!-- Preloader -->
+   <div class="preloader" id="preloader">
+      <div class="spinner-grow" role="status">
+         <span class="visually-hidden">Loading...</span>
+      </div>
+   </div>
+
+   <!-- Search Form Overlay -->
+   <div class="search-bg-overlay" id="searchOverlay"></div>
+
+   <!-- Search Form Popup -->
+   <div class="search-form-popup">
+      <h2 class="mb-4">How can I help you, Today?</h2>
+      <button type="button" class="close-btn" id="searchClose" aria-label="Close">
+         <i class="ti ti-x"></i>
+      </button>
+      <form class="search-form">
+         <input type="search" class="form-control" placeholder="Search...">
+         <button type="submit" class="btn btn-primary">
+            <i class="ti ti-search"></i> Search
+         </button>
+      </form>
+   </div>
+
+   <!-- Header Area-->
+   <header class="header-area style-two">
+      <!-- Header Top -->
+      <div class="header-top">
+         <div class="container h-100 d-flex align-items-center justify-content-between">
+            <!-- Left Side -->
+            <div class="left-side d-flex align-items-center gap-4 gap-lg-5">
+               <div class="d-flex align-items-center gap-2 text-white">
+                  <i class="ti ti-mail-filled"></i>
+                  <span class="d-none d-lg-block">info@example.com</span>
+               </div>
+               <div class="d-flex align-items-center gap-2 text-white">
+                  <i class="ti ti-map-pin-filled"></i>
+                  <span class="d-none d-lg-block">629 Elgin St.Celina,2202</span>
+               </div>
+               <div class="d-flex align-items-center gap-2 text-white">
+                  <i class="ti ti-phone"></i>
+                  <span class="d-none d-lg-block">(888).123.456.7894</span>
+               </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="right-side">
+               <div class="social-nav d-flex align-items-center gap-3">
+                  <a href="#">
+                     <i class="ti ti-brand-facebook"></i>
+                  </a>
+                  <a href="#">
+                     <i class="ti ti-brand-x"></i>
+                  </a>
+                  <a href="#">
+                     <i class="ti ti-brand-linkedin"></i>
+                  </a>
+                  <a href="#">
+                     <i class="ti ti-brand-instagram"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg">
+         <div class="container">
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="index.html">
+               <img src="assets/img/core-img/logo.png" alt="">
+            </a>
+
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#softoraNav"
+               aria-controls="softoraNav" aria-expanded="false" aria-label="Toggle navigation">
+               <i class="ti ti-category"></i>
+            </button>
+
+            <!-- Navbar Nav -->
+            <div class="collapse navbar-collapse justify-content-between" id="softoraNav">
+               <ul class="navbar-nav navbar-nav-scroll">
+                  <li class="softora-dd">
+                     <a href="#">Home <i class="ti ti-caret-down-filled"></i></a>
+                     <ul class="softora-dd-menu">
+                        <li>
+                           <a href="index.html">IT Service</a>
+                        </li>
+                        <li>
+                           <a href="home-2.html">AI Agency</a>
+                        </li>
+                        <li>
+                           <a href="home-3.html">Cyber Security</a>
+                        </li>
+                        <li>
+                           <a href="home-4.html">Big Data Analytics</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="softora-dd">
+                     <a href="#">Pages <i class="ti ti-caret-down-filled"></i></a>
+                     <ul class="softora-dd-menu">
+                        <li class="softora-dd">
+                           <a href="about-us.html">About Us</a>
+                        </li>
+                        <li class="softora-dd">
+                           <a href="#">Service <i class="ti ti-caret-right-filled"></i></a>
+                           <ul class="softora-dd-menu">
+                              <li>
+                                 <a href="service.html">Service</a>
+                              </li>
+                              <li>
+                                 <a href="service-details.html">Service Details</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="softora-dd">
+                           <a href="#">Team <i class="ti ti-caret-right-filled"></i></a>
+                           <ul class="softora-dd-menu">
+                              <li>
+                                 <a href="team.html">Team</a>
+                              </li>
+                              <li>
+                                 <a href="team-details.html">Team Details</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="pricing.html">Pricing Plan</a>
+                        </li>
+                        <li>
+                           <a href="faqs.html">FAQs</a>
+                        </li>
+                        <li>
+                           <a href="404.html">404</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="softora-dd">
+                     <a href="#">Portfolio <i class="ti ti-caret-down-filled"></i></a>
+                     <ul class="softora-dd-menu">
+                        <li>
+                           <a href="portfolio-masonry.html">Portfolio Masonry</a>
+                        </li>
+                        <li>
+                           <a href="portfolio-grid.html">Portfolio Grid</a>
+                        </li>
+                        <li>
+                           <a href="portfolio-details.html">Portfolio Details</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="softora-dd">
+                     <a href="#">Blog <i class="ti ti-caret-down-filled"></i></a>
+                     <ul class="softora-dd-menu">
+                        <li>
+                           <a href="blog-list.html">Blog List</a>
+                        </li>
+                        <li>
+                           <a href="blog-grid.html">Blog Grid</a>
+                        </li>
+                        <li>
+                           <a href="blog-details.html">Blog Details</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="softora-dd">
+                     <a href="contact.html">Contact</a>
+                  </li>
+               </ul>
+
+               <div class="d-flex align-items-center mt-4 mt-lg-0">
+                  <!-- Search Button -->
+                  <div class="header-search-btn" id="searchButton">
+                     <button class="btn">
+                        <i class="ti ti-search"></i>
+                     </button>
+                  </div>
+
+                  <!-- Button -->
+                  <a href="contact.html" class="btn btn-primary">
+                     Get in Touch <i class="ti ti-arrow-up-right"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <!-- Breadcrumb Section -->
+   <div class="breadcrumb-section bg-img" style="background-image: url('assets/img/bg-img/90.jpg');">
+      <div class="container">
+         <!-- Breadcrumb Content -->
+         <div class="breadcrumb-content">
+            <div class="divider"></div>
+            <h2>Pricing plan</h2>
+            <ul class="list-unstyled">
+               <li><a href="index.html">Home</a></li>
+               <li>Pricing plan</li>
+            </ul>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </div>
+
+   <!-- Pricing Plan Section -->
+   <section class="pricing-section">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+               <div class="section-heading text-center">
+                  <span class="sub-title">Pricing Plan</span>
+                  <h2 class="mb-0">Data Solutions For Startup</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="divider-sm"></div>
+
+      <div class="container">
+         <div class="row g-4 align-items-center justify-content-center">
+            <!-- Pricing Card -->
+            <div class="col-12 col-md-6 col-lg-4">
+               <div class="pricing-card-two wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                  <!-- Package Name and Price -->
+                  <div class="packgae-name-price">
+                     <h4>Basic Package</h4>
+                     <p class="mb-0">Pricing plan for Digital Transformation</p>
+                     <div class="border-top mt-4 mb-3"></div>
+                     <h2 class="price-value mb-0">$19.00<span>/Monthly</span></h2>
+                  </div>
+                  <!-- Package Content -->
+                  <ul class="packgae-content ps-0 list-unstyled">
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg>
+
+                        Community Support</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Dedicated Tech Experts</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Unlimited Storage</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Custom Domains</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> 24/7 System Monitoring</li>
+                  </ul>
+
+                  <!-- Button -->
+                  <a href="#" class="btn shadow-sm btn-dark">Choose Package <i class="ti ti-arrow-up-right"></i></a>
+               </div>
+            </div>
+
+            <!-- Pricing Card -->
+            <div class="col-12 col-md-6 col-lg-4">
+               <div class="pricing-card-two active wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                  <!-- Package Name and Price -->
+                  <div class="packgae-name-price">
+                     <h4>Standard Package</h4>
+                     <p class="mb-0">Pricing plan for Digital Transformation</p>
+                     <div class="border-top mt-4 mb-3"></div>
+                     <h2 class="price-value mb-0">$49.00<span>/Monthly</span></h2>
+                  </div>
+                  <!-- Package Content -->
+                  <ul class="packgae-content ps-0 list-unstyled">
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Community Support</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Dedicated Tech Experts</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Unlimited Storage</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Custom Domains</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> 24/7 System Monitoring</li>
+                  </ul>
+
+                  <!-- Button -->
+                  <a href="#" class="btn shadow-sm btn-primary">Choose Package <i class="ti ti-arrow-up-right"></i></a>
+               </div>
+            </div>
+
+            <!-- Pricing Card -->
+            <div class="col-12 col-md-6 col-lg-4">
+               <div class="pricing-card-two wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
+                  <!-- Package Name and Price -->
+                  <div class="packgae-name-price">
+                     <h4>Premium Package</h4>
+                     <p class="mb-0">Pricing plan for Digital Transformation</p>
+                     <div class="border-top mt-4 mb-3"></div>
+                     <h2 class="price-value mb-0">$99.00<span>/Monthly</span></h2>
+                  </div>
+                  <!-- Package Content -->
+                  <ul class="packgae-content ps-0 list-unstyled">
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Community Support</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Dedicated Tech Experts</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Unlimited Storage</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> Custom Domains</li>
+                     <li>
+                        <svg width="28" height="28">
+                           <use href="#check-icon"></use>
+                        </svg> 24/7 System Monitoring</li>
+                  </ul>
+
+                  <!-- Button -->
+                  <a href="#" class="btn shadow-sm btn-dark">Choose Package <i class="ti ti-arrow-up-right"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- FAQ Wrapper -->
+   <div class="faq-wrapper bg-secondary">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-4 g-md-5">
+            <!-- Happy Counts -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="happy-counts wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                  <h3 class="counter">12</h3>
+                  <h5 class="mb-0">Years Experience</h5>
+               </div>
+            </div>
+
+            <!-- Happy Counts -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="happy-counts wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                  <h3 class="counter">97<span>%</span></h3>
+                  <h5 class="mb-0">Retention Rate</h5>
+               </div>
+            </div>
+
+            <!-- Happy Counts -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="happy-counts wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
+                  <h3 class="counter">8<span>K</span></h3>
+                  <h5 class="mb-0">Project Completed</h5>
+               </div>
+            </div>
+
+            <!-- Happy Counts -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="happy-counts wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="1000ms">
+                  <h3 class="counter">19<span>K</span></h3>
+                  <h5 class="mb-0">Happy Clients</h5>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </div>
+
+   <!-- Testimonial Section -->
+   <section class="testimonial-section">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-4">
+            <div class="col-12 col-xl-7">
+               <div class="section-heading">
+                  <span class="sub-title">Testimonials</span>
+                  <h2>Our Most Satisfied Customers Share Their Experiences!</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="divider-sm"></div>
+
+      <div class="container">
+         <div class="row g-4">
+            <div class="col-12 col-md-10">
+               <!-- Testimonial Slider -->
+               <div class="testimonial-slide">
+                  <div class="swiper testimonial-swiper">
+                     <div class="swiper-wrapper">
+                        <!-- Testimonial Slide -->
+                        <div class="swiper-slide">
+                           <div class="testimonial-card style-three">
+                              <div class="row g-5">
+                                 <div class="col-12 col-md-8">
+                                    <!-- Testimonial Info -->
+                                    <div class="testimonial-info">
+                                       <div class="testimonial-content">
+                                          <!-- Ratings -->
+                                          <div class="ratings">
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                          </div>
+                                          <p class="testimonial-text">“Working with several word themes and templates
+                                             the last years only can say this is best in every level use it for my
+                                             reviews that I have already compa and the reviews that I have already are
+                                             all excellent. Not only the design but the are reviews code.”</p>
+                                       </div>
+
+                                       <div
+                                          class="testimonial-author d-flex align-items-center justify-content-between gap-4">
+                                          <div>
+                                             <h4 class="mb-1">Marvin McKinney</h4>
+                                             <p class="mb-0">Product Manager</p>
+                                          </div>
+                                          <div>
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62"
+                                                viewBox="0 0 62 62" fill="none">
+                                                <path
+                                                   d="M14.5312 9.41406C6.51702 9.41406 0 15.9329 0 23.9453C0 31.2606 5.43154 37.3306 12.4771 38.3311C11.9131 42.4287 10.3486 46.3275 7.90415 49.7085C7.42874 50.3683 7.44654 51.2624 7.9538 51.9009C8.4515 52.5292 9.31635 52.7674 10.0754 52.4473C21.6088 47.6332 29.0625 36.4438 29.0625 23.9453C29.0625 15.9329 22.5455 9.41406 14.5312 9.41406ZM47.4688 9.41406C39.4545 9.41406 32.9375 15.9329 32.9375 23.9453C32.9375 31.2606 38.369 37.3306 45.4146 38.3311C44.8506 42.4287 43.2861 46.3275 40.8417 49.7085C40.3662 50.3683 40.384 51.2624 40.8913 51.9009C41.389 52.5292 42.2538 52.7674 43.0129 52.4473C54.5463 47.6332 62 36.4438 62 23.9453C62 15.9329 55.483 9.41406 47.4688 9.41406Z"
+                                                   fill="url(#paint0_linear_1_3752)" />
+                                                <defs>
+                                                   <linearGradient id="paint0_linear_1_3752" x1="3.5" y1="19" x2="62"
+                                                      y2="31" gradientUnits="userSpaceOnUse">
+                                                      <stop offset="0" stop-color="#601FEB" />
+                                                      <stop offset="1" stop-color="#C700B1" />
+                                                   </linearGradient>
+                                                </defs>
+                                             </svg>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-12 col-md-4">
+                                    <!-- Thumbnail -->
+                                    <div class="testimonial-thumbnail">
+                                       <img src="assets/img/bg-img/74.png" alt="">
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+
+                        <!-- Testimonial Slide -->
+                        <div class="swiper-slide">
+                           <div class="testimonial-card style-three">
+                              <div class="row g-5">
+                                 <div class="col-12 col-md-8">
+                                    <!-- Testimonial Info -->
+                                    <div class="testimonial-info">
+                                       <div class="testimonial-content">
+                                          <!-- Ratings -->
+                                          <div class="ratings">
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                          </div>
+                                          <p class="testimonial-text">“Working with several word themes and templates
+                                             the last years only can say this is best in every level use it for my
+                                             reviews that I have already compa and the reviews that I have already are
+                                             all excellent. Not only the design but the are reviews code.”</p>
+                                       </div>
+
+                                       <div
+                                          class="testimonial-author d-flex align-items-center justify-content-between gap-4">
+                                          <div>
+                                             <h4 class="mb-1">Marvin McKinney</h4>
+                                             <p class="mb-0">Product Manager</p>
+                                          </div>
+                                          <div>
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62"
+                                                viewBox="0 0 62 62" fill="none">
+                                                <path
+                                                   d="M14.5312 9.41406C6.51702 9.41406 0 15.9329 0 23.9453C0 31.2606 5.43154 37.3306 12.4771 38.3311C11.9131 42.4287 10.3486 46.3275 7.90415 49.7085C7.42874 50.3683 7.44654 51.2624 7.9538 51.9009C8.4515 52.5292 9.31635 52.7674 10.0754 52.4473C21.6088 47.6332 29.0625 36.4438 29.0625 23.9453C29.0625 15.9329 22.5455 9.41406 14.5312 9.41406ZM47.4688 9.41406C39.4545 9.41406 32.9375 15.9329 32.9375 23.9453C32.9375 31.2606 38.369 37.3306 45.4146 38.3311C44.8506 42.4287 43.2861 46.3275 40.8417 49.7085C40.3662 50.3683 40.384 51.2624 40.8913 51.9009C41.389 52.5292 42.2538 52.7674 43.0129 52.4473C54.5463 47.6332 62 36.4438 62 23.9453C62 15.9329 55.483 9.41406 47.4688 9.41406Z"
+                                                   fill="url(#paint0_linear_1_37599)" />
+                                                <defs>
+                                                   <linearGradient id="paint0_linear_1_37599" x1="3.5" y1="19" x2="62"
+                                                      y2="31" gradientUnits="userSpaceOnUse">
+                                                      <stop offset="0" stop-color="#601FEB" />
+                                                      <stop offset="1" stop-color="#C700B1" />
+                                                   </linearGradient>
+                                                </defs>
+                                             </svg>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-12 col-md-4">
+                                    <!-- Thumbnail -->
+                                    <div class="testimonial-thumbnail">
+                                       <img src="assets/img/bg-img/74.png" alt="">
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+
+                        <!-- Testimonial Slide -->
+                        <div class="swiper-slide">
+                           <div class="testimonial-card style-three">
+                              <div class="row g-5">
+                                 <div class="col-12 col-md-8">
+                                    <!-- Testimonial Info -->
+                                    <div class="testimonial-info">
+                                       <div class="testimonial-content">
+                                          <!-- Ratings -->
+                                          <div class="ratings">
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                          </div>
+                                          <p class="testimonial-text">“Working with several word themes and templates
+                                             the last years only can say this is best in every level use it for my
+                                             reviews that I have already compa and the reviews that I have already are
+                                             all excellent. Not only the design but the are reviews code.”</p>
+                                       </div>
+
+                                       <div
+                                          class="testimonial-author d-flex align-items-center justify-content-between gap-4">
+                                          <div>
+                                             <h4 class="mb-1">Marvin McKinney</h4>
+                                             <p class="mb-0">Product Manager</p>
+                                          </div>
+                                          <div>
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62"
+                                                viewBox="0 0 62 62" fill="none">
+                                                <path
+                                                   d="M14.5312 9.41406C6.51702 9.41406 0 15.9329 0 23.9453C0 31.2606 5.43154 37.3306 12.4771 38.3311C11.9131 42.4287 10.3486 46.3275 7.90415 49.7085C7.42874 50.3683 7.44654 51.2624 7.9538 51.9009C8.4515 52.5292 9.31635 52.7674 10.0754 52.4473C21.6088 47.6332 29.0625 36.4438 29.0625 23.9453C29.0625 15.9329 22.5455 9.41406 14.5312 9.41406ZM47.4688 9.41406C39.4545 9.41406 32.9375 15.9329 32.9375 23.9453C32.9375 31.2606 38.369 37.3306 45.4146 38.3311C44.8506 42.4287 43.2861 46.3275 40.8417 49.7085C40.3662 50.3683 40.384 51.2624 40.8913 51.9009C41.389 52.5292 42.2538 52.7674 43.0129 52.4473C54.5463 47.6332 62 36.4438 62 23.9453C62 15.9329 55.483 9.41406 47.4688 9.41406Z"
+                                                   fill="url(#paint0_linear_1_375789)" />
+                                                <defs>
+                                                   <linearGradient id="paint0_linear_1_375789" x1="3.5" y1="19" x2="62"
+                                                      y2="31" gradientUnits="userSpaceOnUse">
+                                                      <stop offset="0" stop-color="#601FEB" />
+                                                      <stop offset="1" stop-color="#C700B1" />
+                                                   </linearGradient>
+                                                </defs>
+                                             </svg>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-12 col-md-4">
+                                    <!-- Thumbnail -->
+                                    <div class="testimonial-thumbnail">
+                                       <img src="assets/img/bg-img/74.png" alt="">
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+
+                        <!-- Testimonial Slide -->
+                        <div class="swiper-slide">
+                           <div class="testimonial-card style-three">
+                              <div class="row g-5">
+                                 <div class="col-12 col-md-8">
+                                    <!-- Testimonial Info -->
+                                    <div class="testimonial-info">
+                                       <div class="testimonial-content">
+                                          <!-- Ratings -->
+                                          <div class="ratings">
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                             <i class="ti ti-star-filled"></i>
+                                          </div>
+                                          <p class="testimonial-text">“Working with several word themes and templates
+                                             the last years only can say this is best in every level use it for my
+                                             reviews that I have already compa and the reviews that I have already are
+                                             all excellent. Not only the design but the are reviews code.”</p>
+                                       </div>
+
+                                       <div
+                                          class="testimonial-author d-flex align-items-center justify-content-between gap-4">
+                                          <div>
+                                             <h4 class="mb-1">Marvin McKinney</h4>
+                                             <p class="mb-0">Product Manager</p>
+                                          </div>
+                                          <div>
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62"
+                                                viewBox="0 0 62 62" fill="none">
+                                                <path
+                                                   d="M14.5312 9.41406C6.51702 9.41406 0 15.9329 0 23.9453C0 31.2606 5.43154 37.3306 12.4771 38.3311C11.9131 42.4287 10.3486 46.3275 7.90415 49.7085C7.42874 50.3683 7.44654 51.2624 7.9538 51.9009C8.4515 52.5292 9.31635 52.7674 10.0754 52.4473C21.6088 47.6332 29.0625 36.4438 29.0625 23.9453C29.0625 15.9329 22.5455 9.41406 14.5312 9.41406ZM47.4688 9.41406C39.4545 9.41406 32.9375 15.9329 32.9375 23.9453C32.9375 31.2606 38.369 37.3306 45.4146 38.3311C44.8506 42.4287 43.2861 46.3275 40.8417 49.7085C40.3662 50.3683 40.384 51.2624 40.8913 51.9009C41.389 52.5292 42.2538 52.7674 43.0129 52.4473C54.5463 47.6332 62 36.4438 62 23.9453C62 15.9329 55.483 9.41406 47.4688 9.41406Z"
+                                                   fill="url(#paint0_linear_1_375962)" />
+                                                <defs>
+                                                   <linearGradient id="paint0_linear_1_375962" x1="3.5" y1="19" x2="62"
+                                                      y2="31" gradientUnits="userSpaceOnUse">
+                                                      <stop offset="0" stop-color="#601FEB" />
+                                                      <stop offset="1" stop-color="#C700B1" />
+                                                   </linearGradient>
+                                                </defs>
+                                             </svg>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-12 col-md-4">
+                                    <!-- Thumbnail -->
+                                    <div class="testimonial-thumbnail">
+                                       <img src="assets/img/bg-img/74.png" alt="">
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="col-12 col-md-2 d-none d-md-block">
+               <div class="swiper-pagination testimonial-pagination"></div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- CTA Wrapper -->
+   <div class="cta-wrapper bg-img" style="background-image: url(assets/img/core-img/grid.jpg)">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-4 g-xl-5 align-items-center">
+            <div class="col-12 col-lg-6 col-xl-7">
+               <h2 class="mb-0 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">Start Building Your
+                  Business Now</h2>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-5">
+               <p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">Communicate your pricing
+                  clearly and transparently to build trust with your customers. Hidden fees or
+                  unclear pricing structures can lead to dissatisfaction.</p>
+               <a href="pricing.html" class="btn btn-primary btn-hover-border wow fadeInUp" data-wow-duration="1000ms"
+                  data-wow-delay="800ms">Get Started <i class="ti ti-arrow-up-right"></i></a>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </div>
+
+   <!-- Footer -->
+   <footer class="footer-wrapper">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-5">
+            <!-- Footer Card -->
+            <div class="col-12 col-sm-6 col-lg-4">
+               <div class="footer-card pe-lg-5">
+                  <a href="#" class="d-block mb-4">
+                     <img src="assets/img/core-img/logo.png" alt="">
+                  </a>
+                  <p class="mb-0">Each demo built with Teba will look different. You can customize almost anything in
+                     the appearance of your website with only a few.</p>
+
+                  <!-- Social Nav -->
+                  <div class="social-nav">
+                     <a href="#">
+                        <i class="ti ti-brand-facebook"></i>
+                     </a>
+                     <a href="#">
+                        <i class="ti ti-brand-x"></i>
+                     </a>
+                     <a href="#">
+                        <i class="ti ti-brand-linkedin"></i>
+                     </a>
+                     <a href="#">
+                        <i class="ti ti-brand-instagram"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-sm-6 col-lg">
+               <div class="footer-card">
+                  <h5 class="mb-4">Quick Links</h5>
+
+                  <!-- Footer Nav -->
+                  <ul class="footer-nav">
+                     <li><a href="#">About Us</a></li>
+                     <li><a href="#">Our Team</a></li>
+                     <li><a href="#">Pricing Plans</a></li>
+                     <li><a href="#">Blogs</a></li>
+                     <li><a href="#">Contact Us</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-sm-6 col-lg">
+               <div class="footer-card">
+                  <h5 class="mb-4">Services</h5>
+
+                  <!-- Footer Nav -->
+                  <ul class="footer-nav">
+                     <li><a href="#">UI/UX Design</a></li>
+                     <li><a href="#">App Development</a></li>
+                     <li><a href="#">Digital Marketing</a></li>
+                     <li><a href="#">Web Development</a></li>
+                     <li><a href="#">Cyber Security</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-sm-6 col-lg">
+               <div class="footer-card">
+                  <h5 class="mb-4">Information</h5>
+
+                  <!-- Footer Nav -->
+                  <ul class="footer-nav">
+                     <li><a href="#">Working Process</a></li>
+                     <li><a href="#">Privacy Policy</a></li>
+                     <li><a href="#">Terms &amp; Conditions</a></li>
+                     <li><a href="#">Faqs</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Copyright Wrapper -->
+      <div class="copyright-wrapper">
+         <div class="container">
+            <div class="row align-items-center">
+               <!-- Copyright -->
+               <div class="col-12 col-md-6">
+                  <p class="mb-3 mb-md-0 copyright">Copyright © <span id="year">2025</span> <a href="#">Nano Theme</a>
+                     All
+                     rights
+                     reserved.</p>
+               </div>
+
+               <!-- Footer Bottom Nav -->
+               <div class="col-12 col-md-6">
+                  <div class="footer-bottom-nav">
+                     <a href="#">Privacy &amp; Terms</a>
+                     <a href="#">FAQ</a>
+                     <a href="#">Contact Us</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <!-- Scroll To Top -->
+   <button id="scrollTopButton" class="softora-scrolltop scrolltop-hide">
+      <i class="ti ti-arrow-up"></i>
+   </button>
+
+   <!-- All JavaScript Files-->
+   <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/slideToggle.min.js"></script>
+   <script src="assets/js/swiper-bundle.min.js"></script>
+   <script src="assets/js/jarallax.min.js"></script>
+   <script src="assets/js/index.js"></script>
+   <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+   <script src="assets/js/isotope.pkgd.min.js"></script>
+   <script src="assets/js/wow.min.js"></script>
+   <script src="assets/js/active.js"></script>
+
+</body>
+</html>

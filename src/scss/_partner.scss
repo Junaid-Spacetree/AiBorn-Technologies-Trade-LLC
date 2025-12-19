@@ -1,0 +1,61 @@
+@use 'rs';
+@use 'color';
+
+/* Partner CSS */
+
+.trusted-clients-logo {
+   display: flex;
+   align-items: center;
+   gap: 29px;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+   img {
+      transition: all 0.35s;
+      max-height: 32px;
+      max-width: 100%;
+   }
+
+   .partner-logo {
+      border: 1px solid color.$border;
+      border-radius: 6px;
+      padding: 2rem;
+      text-align: center;
+
+      &:hover,
+      &:focus {
+         img {
+            transform: scale(1.1);
+         }
+      }
+   }
+}
+
+.trusted-company-logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   @media #{rs.$bp-sm} {
+      padding: 12px;
+   }
+
+   @media #{rs.$bp-xl} {
+      padding: 22px;
+   }
+
+   img {
+      transition: all 0.35s;
+      max-height: 34px;
+      max-width: 100%;
+      cursor: pointer;
+   }
+
+   &:hover,
+   &:focus {
+      img {
+         filter: grayscale(100%);
+         transform: scale(1.1);
+      }
+   }
+}

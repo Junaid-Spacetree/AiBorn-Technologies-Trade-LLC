@@ -1,0 +1,321 @@
+@use 'rs';
+@use 'color';
+
+/* Team CSS */
+
+.team-card {
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   border-radius: 18px;
+   margin: 4px;
+
+   &:nth-child(2) {
+      margin-top: 30px;
+   }
+
+   img {
+      border-radius: 18px;
+      transition-duration: 350ms;
+      width: 100%;
+   }
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(96, 31, 235, 0.00) 0%, color.$primary 100%);
+      z-index: 10;
+      opacity: 0;
+      visibility: hidden;
+      transition-duration: 350ms;
+   }
+
+   .team-member-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 20px 30px;
+      opacity: 0;
+      visibility: hidden;
+      transition-duration: 350ms;
+      z-index: 100;
+      text-align: center;
+
+      h4 {
+         font-size: 18px;
+         color: color.$white;
+         line-height: 1.2;
+         margin-bottom: 0;
+      }
+
+      span {
+         color: color.$secondary;
+         font-size: 12px;
+      }
+   }
+
+   &.middle-team-card {
+      .team-member-info {
+         h4 {
+            font-size: 24px;
+            margin-bottom: 6px;
+         }
+
+         span {
+            font-size: 16px;
+         }
+      }
+   }
+
+   &:hover,
+   &:focus {
+      img {
+         transform: scale(1.1);
+      }
+
+      &::after,
+      .team-member-info {
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+}
+
+.team-two-card {
+   position: relative;
+
+   h4,
+   p {
+      transition-duration: 350ms;
+   }
+
+   .team-thumbnail {
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 24px;
+
+      .team-social {
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         z-index: 100;
+         display: flex;
+         flex-direction: column;
+         gap: 8px;
+         opacity: 0;
+         visibility: hidden;
+         transition-duration: 500ms;
+         justify-content: flex-end;
+
+         a {
+            width: 36px;
+            height: 36px;
+            background-color: color.$heading;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: color.$white;
+            font-size: 18px;
+            transition-duration: 350ms;
+
+            &:hover,
+            &:focus {
+               background-color: color.$primary;
+            }
+         }
+      }
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         border-radius: 18px;
+         background: rgba(34, 34, 34, 0.80);
+         z-index: 10;
+         transition-duration: 350ms;
+         opacity: 0;
+         visibility: hidden;
+      }
+
+      img {
+         width: 100%;
+         border-radius: 18px;
+         transform: scale(1.07);
+         transition-duration: 350ms;
+      }
+   }
+
+   &:hover,
+   &:focus {
+
+      h4 {
+         color: color.$primary;
+      }
+
+      .team-thumbnail {
+         &::after {
+            opacity: 1;
+            visibility: visible;
+         }
+
+         .team-social {
+            opacity: 1;
+            visibility: visible;
+         }
+
+         img {
+            transform: scale(1);
+         }
+      }
+
+   }
+}
+
+.team-section {
+   .swiper-navigation-container {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      justify-content: flex-end;
+
+      >div {
+         position: relative;
+         z-index: 1;
+         width: 60px;
+         height: 60px;
+         flex: 0 0 60px;
+         background-color: color.$secondary;
+         border-radius: 50%;
+         transition: all 350ms;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         &::after {
+            display: none;
+            opacity: 0;
+         }
+
+         i {
+            font-size: 24px;
+            color: color.$heading;
+            transition: all 350ms;
+         }
+
+         &:hover,
+         &:focus {
+            background-color: color.$primary;
+
+            i {
+               color: color.$white;
+            }
+         }
+      }
+   }
+
+   &.about-page {
+      background-image: url('assets/img/core-img/grid2.jpg');
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+   }
+}
+
+.team-details-section {
+   img {
+      width: 100%;
+      border-radius: 18px;
+   }
+
+   p {
+      font-size: 18px;
+   }
+
+   ul {
+      li {
+         font-size: 18px;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         opacity: 0.9;
+      }
+   }
+
+   .social-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 40px;
+
+      a {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 44px;
+         height: 44px;
+         background-color: color.$secondary;
+         border-radius: 6px;
+         font-size: 20px;
+         color: color.$heading;
+         transition: all 350ms ease;
+
+         &:hover,
+         &:focus {
+            background-color: color.$primary;
+            border-color: color.$primary;
+            color: color.$white;
+         }
+      }
+   }
+}
+
+.experience-info {
+   p {
+      font-size: 16px;
+      opacity: 0.9;
+
+      @media #{rs.$bp-lg} {
+         font-size: 18px;
+      }
+   }
+
+   .progress-item {
+      .progress-info {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 20px;
+         font-size: 16px;
+         font-weight: 600;
+         color: color.$heading;
+
+         @media #{rs.$bp-lg} {
+            font-size: 18px;
+         }
+      }
+
+      .progress {
+         width: 100%;
+         height: 10px;
+         border-radius: 2px;
+         background: rgba(96, 31, 235, 0.50);
+      }
+
+      .progress-bar {
+         border-radius: 2px;
+         background: color.$primary;
+      }
+   }
+}

@@ -1,0 +1,179 @@
+@use 'rs';
+@use 'color';
+
+// Theme Two
+
+.theme-two {
+
+    html,
+    body,
+    p {
+        color: color.$text-hover;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: color.$heading-two;
+    }
+
+    .btn-primary {
+        border-color: color.$primary-two;
+        background-color: color.$primary-two;
+        color: color.$white;
+
+        &:hover,
+        &:focus {
+            background-color: color.$bg;
+        }
+    }
+
+    .btn-hover-border {
+        border-color: color.$primary-two !important;
+    }
+
+    .section-heading .sub-title {
+        background: rgba(43, 77, 255, 0.10);
+        color: color.$heading-two;
+    }
+
+    .about-list .icon i {
+        color: color.$heading-two;
+    }
+
+    .service-card {
+
+        &:hover,
+        &:focus {
+
+            .service-title,
+            .service-number,
+            .btn {
+                color: color.$primary-two;
+            }
+        }
+    }
+
+    .service-pagination {
+        span {
+            background-color: color.$text-hover;
+
+            &::before {
+                border: 2px solid color.$primary-two;
+            }
+
+            &.swiper-pagination-bullet-active {
+                background-color: color.$primary-two;
+            }
+        }
+    }
+
+    .process-card .process-thumb .number {
+        background-color: color.$primary-two;
+    }
+
+    .testimonials-nav-link.active,
+    .testimonials-nav-link:hover,
+    .testimonials-nav-link:focus {
+        border-color: color.$primary-two;
+        background-color: color.$primary-two;
+    }
+
+    .faq-thumbnail .faq-video-content .play-video-btn .icon {
+        color: color.$primary-two;
+    }
+
+    .faq-thumbnail .faq-video-content .play-video-btn .icon:hover,
+    .faq-thumbnail .faq-video-content .play-video-btn .icon:focus {
+        background-color: color.$primary-two;
+        color: color.$white;
+    }
+
+    .blog-card .blog-meta a {
+        color: color.$text-hover;
+
+        &:hover,
+        &:focus {
+            color: color.$primary-two;
+        }
+    }
+
+    .blog-card .blog-meta .dot {
+        background-color: color.$text-hover;
+    }
+
+    .blog-card .post-title {
+        color: color.$heading-two;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+        background-image: linear-gradient(currentColor, currentColor);
+    }
+
+    .blog-card .read-more-btn {
+        color: color.$primary-two;
+    }
+
+    .softora-scrolltop::before {
+        background: conic-gradient(color.$primary-two var(--scroll-progress), color.$heading-two 0);
+    }
+}
+
+// Theme Three
+
+.theme-three {
+    .btn-primary {
+        transition: all 0.3s ease;
+        background: linear-gradient(90deg, color.$primary 0%, #C700B1 100%);
+
+        &:hover,
+        &:focus {
+            background: linear-gradient(180deg, color.$primary 0%, #C700B1 100%);
+        }
+    }
+
+    .section-heading .sub-title {
+        background: linear-gradient(180deg, rgba(96, 31, 235, 0.10) 0%, rgba(96, 31, 235, 0.10) 100%);
+        color: color.$primary;
+    }
+
+    .section-heading.style-two .sub-title {
+        background: rgba(255, 255, 255, 0.1);
+        color: color.$white;
+    }
+
+    .service-card {
+        .service-title,
+        .service-number,
+        .btn {
+            transition: all 0.3s ease;
+            background: linear-gradient(90deg, color.$heading 0%, color.$heading 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &:hover,
+        &:focus {
+
+            .service-title,
+            .service-number,
+            .btn {
+                background: linear-gradient(90deg, color.$primary 0%, #C700B1 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .softora-scrolltop {
+        border-radius: 8px;
+    }
+
+    .softora-scrolltop::before {
+        background: linear-gradient(90deg, color.$primary 0%, #C700B1 100%);        
+        border-radius: 8px;
+    }
+}

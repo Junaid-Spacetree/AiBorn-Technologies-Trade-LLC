@@ -1,0 +1,54 @@
+/* Preloader CSS */
+
+@use 'rs';
+@use 'color';
+
+/* Preloader CSS */
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background-color: color.$bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .spinner-grow {
+        background-color: color.$primary;
+    }
+}
+
+.theme-two {
+    #preloader {
+        background-color: color.$heading-two;
+
+        .spinner-grow {
+            background-color: color.$white;
+        }
+    }
+}
+
+.theme-three {
+    #preloader {
+        background: linear-gradient(90deg, color.$primary 0%, #C700B1 100%);
+
+        .spinner-grow {
+            background-color: color.$white;
+        }
+    }
+}
+
+.theme-four {
+    #preloader {
+        background-color: color.$primary;
+
+        .spinner-grow {
+            background-color: color.$white;
+        }
+    }
+}

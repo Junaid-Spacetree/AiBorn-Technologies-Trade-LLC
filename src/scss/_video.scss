@@ -1,0 +1,297 @@
+@use 'rs';
+@use 'color';
+
+/* Video CSS */
+
+.popup-video {
+   position: relative;
+   z-index: 1;
+
+   .video-btn {
+      position: relative;
+      z-index: 1;
+      transition-duration: 350ms;
+      display: flex;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: color.$primary;
+      align-items: center;
+      justify-content: center;
+      color: color.$white;
+      font-size: 12px;
+      cursor: pointer;
+
+      .video-sonar {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+         top: 0;
+         left: 0;
+         z-index: -10;
+         background-color: color.$primary;
+         animation: video-sonar 2s linear infinite;
+
+         &::before {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: rgba(color.$primary, 0.7);
+            content: '';
+            top: -30px;
+            left: -30px;
+            z-index: -100;
+         }
+
+         &::after {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background-color: color.$primary;
+            content: '';
+            top: -15px;
+            left: -15px;
+            z-index: -50;
+         }
+      }
+   }
+}
+
+.video-section {
+   position: relative;
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 700px;
+
+   &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 18px;
+      content: '';
+      top: 0;
+      left: 0;
+      z-index: -10;
+      background-color: rgba(color.$bg, 0.4);
+   }
+
+   &.style-two {
+      height: 500px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex-direction: column;
+      gap: 100px;
+      border-radius: 18px;
+      transition-duration: 350ms;
+
+      @media #{rs.$bp-lg} {
+         height: 600px;
+      }
+
+      .popup-video {
+         .video-btn {
+            background-color: color.$white;
+            color: color.$heading;
+
+            .video-sonar {
+               background-color: color.$white;
+               animation: video-sonar 2s linear infinite;
+
+               &::before {
+                  background-color: rgba(color.$white, 0.7);
+               }
+
+               &::after {
+                  background-color: color.$white;
+               }
+            }
+         }
+      }
+
+      .video-text {
+         text-align: center;
+         -webkit-text-stroke-width: 1px;
+         -webkit-text-stroke-color: rgba(255, 255, 255, 0.60);
+         font-size: 80px;
+         font-weight: 400;
+         letter-spacing: -3.2px;
+         font-family: "DM Serif Display";
+         font-style: normal;
+         color: transparent;
+         line-height: 1;
+
+         @media #{rs.$bp-lg} {
+            font-size: 120px;
+         }
+
+         @media #{rs.$bp-xl} {
+            font-size: 160px;
+         }
+      }
+
+      &:hover,
+      &:focus {
+         transform: translateY(-12px);
+      }
+   }
+}
+
+.milestone-wrapper {
+   position: absolute;
+   width: 100%;
+   height: auto;
+   z-index: auto;
+   bottom: 0;
+   left: 0;
+}
+
+.milestone-card {
+   background-color: color.$primary;
+   padding: 32px 24px;
+   border-radius: 10px 10px 0 0;
+   width: 295px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+
+   @media #{rs.$bp-lg} {
+      width: 380px;
+      padding: 60px 36px;
+   }
+
+   @media #{rs.$bp-xxl} {
+      width: 410px;
+      padding: 60px 36px;
+   }
+
+   .single-milestone {
+      background-color: color.$white;
+      padding: 20px;
+      border-radius: 18px;
+      width: 100%;
+      text-align: center;
+
+      @media #{rs.$bp-lg} {
+         padding: 30px;
+      }
+
+      h2 {
+         color: color.$heading;
+         font-size: 36px;
+         font-weight: 400;
+         letter-spacing: -1.88px;
+         margin-bottom: 0.5rem;
+         line-height: 1.2;
+
+         @media #{rs.$bp-sm} {
+            font-size: 56px;
+         }
+
+         @media #{rs.$bp-md} {
+            font-size: 64px;
+         }
+
+         @media #{rs.$bp-lg} {
+            font-size: 72px;
+         }
+
+         @media #{rs.$bp-xxl} {
+            font-size: 94px;
+         }
+      }
+
+      p {
+         font-size: 18px;
+         letter-spacing: -0.44px;
+         line-height: 1.3;
+
+         @media #{rs.$bp-lg} {
+            font-size: 22px;
+         }
+      }
+   }
+}
+
+@-webkit-keyframes video-sonar {
+   0% {
+      opacity: 1;
+      transform: scale(0.5);
+   }
+
+   100% {
+      opacity: 0;
+      transform: scale(1.3);
+   }
+}
+
+@keyframes video-sonar {
+   0% {
+      opacity: 1;
+      transform: scale(0.5);
+   }
+
+   100% {
+      opacity: 0;
+      transform: scale(1.3);
+   }
+}
+
+.video-popup-iframe {
+   display: none;
+   position: fixed;
+   z-index: 999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.8);
+   justify-content: center;
+   align-items: center;
+
+   .video-content {
+      position: relative;
+      width: 90%;
+      max-width: 900px;
+      padding: 0;
+      z-index: 1;
+
+      .close-btn {
+         position: absolute;
+         top: -3rem;
+         right: 0;
+         z-index: 1000;
+         width: 36px;
+         height: 36px;
+         border-radius: 50%;
+         border: 0;
+         font-size: 1.25rem;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: color.$white;
+         cursor: pointer;
+         color: color.$heading;
+         transition: all 0.3s;
+
+         &:hover,
+         &:focus {
+            background-color: color.$primary;
+            color: color.$white;
+         }
+
+         @media #{rs.$bp-lg} {
+            width: 40px;
+            height: 40px;
+            top: -2.5rem;
+            right: -2.5rem;
+         }
+      }
+   }
+}

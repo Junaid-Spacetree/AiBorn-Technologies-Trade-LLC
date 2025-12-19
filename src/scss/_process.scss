@@ -1,0 +1,192 @@
+@use 'rs';
+@use 'color';
+
+/* Progress CSS */
+
+.process-card {
+   position: relative;
+   z-index: 1;
+   text-align: center;
+   margin-top: 1rem;
+
+   @media #{rs.$bp-xl} {
+      padding: 0 3rem;
+   }
+
+   .process-thumb {
+      position: relative;
+      z-index: 1;
+      max-width: 195px;
+      width: 100%;
+      border-radius: 18px;
+      margin: 0 auto 30px;
+
+      img {
+         border-radius: 18px;
+      }
+
+      .number {
+         position: absolute;
+         z-index: 10;
+         right: -25px;
+         top: -16px;
+         width: 50px;
+         height: 50px;
+         border-radius: 50%;
+         background-color: color.$primary;
+         color: color.$white;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 18px;
+         border: 4px solid color.$white;
+      }
+   }
+
+   p {
+      color: color.$text-hover;
+   }
+}
+
+.process-card-two {
+   text-align: center;
+   transition: all 0.3s ease;
+
+   .process-thumb {
+      position: relative;
+      z-index: 1;
+      width: 176px;
+      height: 176px;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      border: 1px dashed color.$primary;
+      padding: 10px;
+
+      .number {
+         position: absolute;
+         z-index: 10;
+         top: 10px;
+         left: 2px;
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         background-color: color.$primary;
+         color: color.$white;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+         font-size: 18px;
+      }
+
+      img {
+         border-radius: 50%;
+      }
+   }
+}
+
+.row {
+   .col-12:nth-child(odd) {
+      .process-card-two {
+         margin-top: 100px;
+      }
+   }
+}
+
+.process-wrap {
+   .col-12:nth-child(1),
+   .col-12:nth-child(2) {
+      .process-card {
+         .process-thumb {
+            &::after {
+               position: absolute;
+               background-image: url("assets/img/core-img/curve1.png");
+               width: 180px;
+               top: 50%;
+               left: calc(100% + 38px);
+               z-index: 10;
+               content: "";
+               height: 34px;
+               background-repeat: no-repeat;
+               background-position: center center;
+               background-size: contain;
+               transform: translateY(-50%);
+               display: none;
+
+               @media #{rs.$bp-lg} {
+                  width: 80px;
+                  display: block;
+                  left: calc(100% + 24px);
+               }
+
+               @media #{rs.$bp-xl} {
+                  width: 120px;
+                  left: calc(100% + 38px);
+               }
+
+               @media #{rs.$bp-xxl} {
+                  width: 180px;
+               }
+            }
+         }
+      }
+   }
+
+   .col-12:nth-child(2) {
+      .process-card {
+         .process-thumb {
+            &::after {
+               background-image: url("assets/img/core-img/curve2.png");
+            }
+         }
+      }
+   }
+}
+
+.process-section {
+   position: relative;
+   z-index: 1;
+
+   .bg-shape {
+      position: absolute;
+      z-index: -10;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: 100%;
+
+      img {
+         width: auto;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &.style-two {
+      background-color: #001C34;
+
+      .section-heading {
+         .sub-title {
+            border: 1px solid rgba(88, 91, 111, 0.08);
+            background: rgba(255, 255, 255, 0.10);
+            color: color.$secondary;
+         }
+
+         h2 {
+            color: color.$white;
+         }
+      }
+
+      .process-card {
+         .process-title {
+            color: color.$white;
+         }
+
+         p {
+            color: color.$secondary;
+         }
+      }
+   }
+}

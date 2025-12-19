@@ -1,0 +1,600 @@
+@use 'rs';
+@use 'color';
+
+/* Header CSS */
+
+.header-area {
+   background-color: transparent;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   transition: all 350ms;
+
+   &::after {
+      transition: all 350ms;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+      content: '';
+      bottom: 0;
+      left: 0;
+      z-index: -10;
+   }
+
+   @media #{rs.$bp-lg} {
+      box-shadow: none;
+   }
+
+   &.mobile-menu-open {
+      background-color: color.$heading-two;
+   }
+
+   .navbar-toggler {
+      padding: 0;
+      width: 1.75rem;
+      height: 1.75rem;
+      font-size: 1.5rem;
+      color: color.$white;
+      border: 0;
+
+      &:focus {
+         box-shadow: none;
+      }
+   }
+
+   .navbar {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      transition: all 350ms;
+
+      @media #{rs.$bp-lg} {
+         height: 100px;
+         padding-top: 0;
+         padding-bottom: 0;
+      }
+
+      .navbar-brand {
+         margin-right: 2rem;
+         line-height: 1 !important;
+
+         @media #{rs.$bp-lg} {
+            margin-right: 3rem;
+         }
+
+         @media #{rs.$bp-xl} {
+            margin-right: 3rem;
+         }
+
+         @media #{rs.$bp-xxl} {
+            margin-right: 6rem;
+         }
+      }
+   }
+
+   .navbar-nav {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      @media #{rs.$bp-lg} {
+         gap: 16px;
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+
+      @media #{rs.$bp-xl} {
+         gap: 32px;
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+
+      @media #{rs.$bp-xxl} {
+         gap: 44px;
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+
+      li {
+         >a {
+            display: inline-block;
+            color: color.$white;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: capitalize;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            transition: all 350ms;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            i {
+               margin-top: 3px;
+            }
+
+            @media #{rs.$bp-xl} {
+               padding-top: 1.5rem;
+               padding-bottom: 1.5rem;
+            }
+
+            &:hover,
+            &:focus {
+               color: color.$primary-two;
+            }
+         }
+
+         .softora-dd-menu {
+            list-style: none;
+            background-color: transparent;
+            position: relative;
+            z-index: 100;
+            top: 100%;
+            width: 100%;
+            border: 0;
+            border-radius: .5rem;
+            display: none;
+            padding-left: 0;
+
+            @media #{rs.$bp-lg} {
+               padding: 1rem 0;
+               transition: all 350ms;
+               position: absolute;
+               top: calc(100% + 8px);
+               width: 15rem;
+               background-color: color.$heading-two;
+               visibility: hidden;
+               opacity: 0;
+               display: block;
+               left: -1rem;
+               border: 1px solid rgba(color.$white, 0.1);
+            }
+
+            li>a {
+               transition: all 350ms;
+               position: relative;
+               font-size: 1rem;
+               padding: .375rem 1rem;
+               color: color.$white;
+               text-transform: capitalize;
+               align-items: center;
+               justify-content: space-between;
+
+               @media #{rs.$bp-lg} {
+                  padding: .375rem 1.5rem;
+               }
+
+               &:hover,
+               &:focus {
+                  background-color: transparent;
+                  color: color.$primary-two;
+
+                  @media #{rs.$bp-lg} {
+                     color: color.$primary-two;
+                  }
+               }
+            }
+         }
+
+         &.softora-dd {
+            position: relative;
+            z-index: 1;
+
+            .dropdown-toggler {
+               position: absolute;
+               width: 100%;
+               height: 36px;
+               z-index: 100;
+               background-color: transparent;
+               color: color.$primary-two;
+               top: 2px;
+               cursor: pointer;
+               left: 0;
+               display: flex;
+               align-items: center;
+               justify-content: flex-end;
+               font-size: 14px;
+
+               @media #{rs.$bp-lg} {
+                  display: none;
+               }
+            }
+
+            >a {
+               position: relative;
+            }
+
+            &:hover,
+            &:focus {
+
+               @media #{rs.$bp-lg} {
+                  .softora-dd-menu {
+                     visibility: visible;
+                     opacity: 1;
+                     top: 100%;
+                  }
+               }
+            }
+
+            .softora-dd {
+               .dropdown-toggler {
+                  right: 1rem;
+               }
+
+               >a {
+                  position: relative;
+                  width: 100%;
+               }
+
+               .softora-dd-menu {
+                  display: none;
+                  padding-left: 1rem;
+
+                  @media #{rs.$bp-lg} {
+                     margin-left: .25rem;
+                     top: -8px;
+                     left: 100%;
+                     visibility: hidden;
+                     opacity: 0;
+                     display: block;
+                     padding-left: 0;
+                  }
+               }
+
+               &:hover,
+               &:focus {
+
+                  @media #{rs.$bp-lg} {
+                     .softora-dd-menu {
+                        visibility: visible;
+                        opacity: 1;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &.sticky-on {
+      background-color: color.$heading-two;
+      box-shadow: 0px 30px 42px 0px rgba(33, 39, 37, 0.1);
+
+      &::after {
+         background-color: rgba(255, 255, 255, 0.0);
+      }
+
+      .navbar {
+         @media #{rs.$bp-lg} {
+            height: 85px;
+         }
+      }
+   }
+
+   &.style-two {
+      .header-top {
+         width: 100%;
+         height: 50px;
+         transition-duration: 350ms;
+      }
+
+      .navbar {
+         background-color: color.$white;
+         transition-duration: 350ms;
+
+         @media #{rs.$bp-lg} {
+            height: 100px;
+         }
+      }
+
+      .navbar-toggler {
+         color: color.$heading;
+      }
+
+      .social-nav {
+         a {
+            color: color.$white;
+            font-size: 20px;
+            transform: all 350ms;
+
+            &:hover,
+            &:focus {
+               color: color.$white;
+               transform: translateY(-4px);
+            }
+         }
+      }
+
+      .navbar-nav {
+         li {
+            >a {
+               color: color.$heading;
+
+               &:hover {
+                  color: color.$primary-hover;
+               }
+            }
+
+            .softora-dd-menu {
+               background-color: transparent;
+
+               @media #{rs.$bp-lg} {
+                  background-color: color.$secondary;
+                  border: 0;
+               }
+
+               li>a {
+                  color: color.$heading;
+
+                  @media #{rs.$bp-lg} {
+                     color: color.$heading;
+                  }
+
+                  &:hover,
+                  &:focus {
+                     background-color: transparent;
+                     color: color.$primary;
+
+                     @media #{rs.$bp-lg} {
+                        color: color.$primary;
+                     }
+                  }
+               }
+            }
+
+            &.softora-dd {
+               .dropdown-toggler {
+                  background-color: transparent;
+                  color: color.$primary;
+               }
+            }
+         }
+      }
+
+      &.sticky-on {
+         background-color: color.$bg;
+
+         .header-top {
+            height: 40px;
+            background-color: transparent;
+         }
+
+         &::after {
+            background-color: rgba(255, 255, 255, 0.0);
+         }
+
+         .navbar {
+            @media #{rs.$bp-lg} {
+               height: 80px;
+            }
+         }
+      }
+   }
+
+   &.style-three {
+      top: 30px;
+      box-shadow: none;
+
+      &::after {
+         display: none;
+      }
+
+      .navbar {
+         background-color: color.$white;
+         padding-left: 20px;
+         padding-right: 20px;
+         border-radius: 10px;
+         border: 1px solid rgba(color.$white, 0.1);
+
+         @media #{rs.$bp-lg} {
+            height: 100px;
+         }
+      }
+
+      .navbar-nav {
+         li {
+            >a {
+               color: color.$heading;
+
+               &:hover {
+                  color: color.$primary-hover;
+               }
+            }
+
+            .softora-dd-menu {
+               background-color: transparent;
+
+               @media #{rs.$bp-lg} {
+                  background-color: color.$secondary;
+                  border: 0;
+               }
+
+               li>a {
+                  color: color.$heading;
+
+                  @media #{rs.$bp-lg} {
+                     color: color.$heading;
+                  }
+
+                  &:hover,
+                  &:focus {
+                     background-color: transparent;
+                     color: color.$primary;
+
+                     @media #{rs.$bp-lg} {
+                        color: color.$primary;
+                     }
+                  }
+               }
+            }
+
+            &.softora-dd {
+               .dropdown-toggler {
+                  background-color: transparent;
+                  color: color.$primary;
+               }
+            }
+         }
+      }
+
+      &.sticky-on {
+         box-shadow: none;
+         background-color: transparent;
+
+         .navbar {
+            box-shadow: 0px 30px 42px 0px rgba(33, 39, 37, 0.1);
+            border: 1px solid rgba(color.$primary, 0.1);
+
+            @media #{rs.$bp-lg} {
+               height: 85px;
+            }
+         }
+      }
+   }
+
+   &.style-four {
+
+      &.sticky-on {
+         background-color: color.$primary;
+      }
+   }
+}
+
+.offcanvas-icon {
+   border-radius: 6px;
+   background: rgba(96, 31, 235, 0.12);
+   display: flex;
+   width: 52px;
+   height: 52px;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 0;
+   cursor: pointer;
+}
+
+.header-search-btn {
+   .btn {
+      min-width: 20px;
+      padding: 0;
+      margin-left: 0;
+      margin-right: 36px;
+
+      i {
+         font-size: 24px;
+         color: color.$heading-two;
+      }
+
+      @media #{rs.$bp-lg} {
+         margin-left: 30px;
+      }
+
+      @media #{rs.$bp-xxl} {
+         margin-left: 80px;
+      }
+   }
+}
+
+.sideMenuButton {
+   width: 60px;
+   height: 60px;
+   border-radius: 6px;
+   min-width: 50px;
+   padding: 0;
+   background-color: color.$primary;
+
+   &:hover,
+   &:focus {
+      svg {
+         path {
+            stroke: color.$white;
+         }
+      }
+   }
+}
+
+.right-side-softora-offcanvas {
+   width: 320px !important;
+   background-color: color.$white;
+
+   @media #{rs.$bp-sm} {
+      width: 450px !important;
+   }
+
+   @media #{rs.$bp-xl} {
+      width: 500px !important;
+   }
+
+   .offcanvas-header {
+      height: 110px;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: color.$gray;
+
+      @media #{rs.$bp-sm} {
+         padding-left: 40px;
+         padding-right: 40px;
+      }
+
+      .btn-close {
+         width: 40px;
+         height: 40px;
+         padding: 0;
+         margin: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 6px;
+         transition: all 350ms;
+         border: 1px solid rgba(color.$primary, 0.1);
+      }
+   }
+
+   .offcanvas-body {
+      padding: 40px 20px;
+      scrollbar-width: thin;
+
+      @media #{rs.$bp-sm} {
+         padding: 60px 40px;
+      }
+   }
+}
+
+@media #{rs.$bp-lg} {
+   .softora-dd-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 350ms ease, transform 350ms ease;
+
+      li {
+         opacity: 0;
+         transform: translateY(10px);
+         transition: opacity 350ms ease, transform 350ms ease;
+      }
+   }
+
+   .softora-dd:hover {
+      .softora-dd-menu {
+         opacity: 1;
+         visibility: visible;
+         transform: translateY(0);
+
+         li {
+            opacity: 1;
+            transform: translateY(0);
+         }
+
+         @for $i from 1 through 20 {
+            li:nth-child(#{$i}) {
+               transition-delay: #{$i * 100}ms;
+            }
+         }
+      }
+   }
+}
+
+.navbar-nav-scroll {
+	max-height: 50vh;
+}

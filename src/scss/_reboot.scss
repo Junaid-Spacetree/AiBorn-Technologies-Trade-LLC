@@ -1,0 +1,164 @@
+/* Reboot CSS */
+
+@use 'rs';
+@use 'color';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    color: color.$text;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    padding: 0 !important;
+    font-family: "Inter", sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: color.$heading;
+    font-weight: 600;
+    line-height: 1.25;
+    font-family: "Outfit", sans-serif;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.67;
+    color: color.$text;
+}
+
+a,
+a:hover,
+a:focus {
+    transition-duration: 350ms;
+    text-decoration: none;
+    outline: 0 solid transparent;
+    color: color.$heading;
+}
+
+ul,
+ol {
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input:required,
+textarea:required {
+    box-shadow: none !important;
+}
+
+input:invalid,
+textarea:invalid {
+    box-shadow: none !important;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    max-width: 320px;
+}
+
+@media (min-width:400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 360px;
+    }
+}
+
+@media (min-width:480px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 420px;
+    }
+}
+
+@media (min-width:576px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width:1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1320px;
+    }
+}
