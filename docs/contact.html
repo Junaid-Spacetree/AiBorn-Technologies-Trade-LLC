@@ -530,6 +530,24 @@
       <i class="ti ti-arrow-up"></i>
    </button>
 
+   <!-- Success Popup Modal -->
+   <div class="modal fade" id="contactSuccessModal" tabindex="-1" aria-labelledby="contactSuccessModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content" style="border-radius: 12px; border: none;">
+            <div class="modal-body text-center p-5">
+               <div class="mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#601FEB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #601FEB;">
+                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+               </div>
+               <h4 class="mb-3" style="color: #222222;">Contact Form Submitted</h4>
+               <p class="mb-0" style="color: #666666;">We will get back to you soon.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
    <!-- All JavaScript Files-->
    <script src="assets/js/bootstrap.bundle.min.js"></script>
    <script src="assets/js/slideToggle.min.js"></script>
@@ -540,6 +558,37 @@
    <script src="assets/js/isotope.pkgd.min.js"></script>
    <script src="assets/js/wow.min.js"></script>
    <script src="assets/js/active.js"></script>
+
+   <!-- Contact Form Submission Handler -->
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+         const contactForm = document.querySelector('.faq-contact-form.style-two');
+         const successModal = new bootstrap.Modal(document.getElementById('contactSuccessModal'));
+         
+         if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+               e.preventDefault();
+               
+               // Show success modal
+               successModal.show();
+               
+               // Submit form data to formsubmit.co
+               const formData = new FormData(contactForm);
+               fetch(contactForm.action, {
+                  method: 'POST',
+                  body: formData
+               }).catch(function(error) {
+                  console.log('Form submission error:', error);
+               });
+               
+               // Redirect to home page after 3 seconds
+               setTimeout(function() {
+                  window.location.href = 'index.html';
+               }, 3000);
+            });
+         }
+      });
+   </script>
 
 </body>
 
