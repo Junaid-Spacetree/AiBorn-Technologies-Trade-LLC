@@ -360,26 +360,30 @@
                </div>
 
                <!-- Contact Form -->
-               <form class="faq-contact-form style-two" action="#">
+               <form class="faq-contact-form style-two" action="https://formsubmit.co/info@aiborn.ae" method="POST">
+                  <input type="hidden" name="_subject" value="New Contact Form Submission - AiBorn Technologies">
+                  <input type="hidden" name="_next" value="">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_template" value="table">
                   <div class="row g-4">
                      <div class="col-12 col-lg-6">
                         <div class="form-group">
-                           <input type="text" class="form-control" placeholder="Your name">
+                           <input type="text" name="name" class="form-control" placeholder="Your name" required>
                         </div>
                      </div>
                      <div class="col-12 col-lg-6">
                         <div class="form-group">
-                           <input type="text" class="form-control" placeholder="Phone number">
+                           <input type="text" name="phone" class="form-control" placeholder="Phone number" required>
                         </div>
                      </div>
                      <div class="col-12">
                         <div class="form-group">
-                           <input type="email" class="form-control" placeholder="Email address">
+                           <input type="email" name="email" class="form-control" placeholder="Email address" required>
                         </div>
                      </div>
                      <div class="col-12">
                         <div class="form-group">
-                           <textarea class="form-control" placeholder="Write your message"></textarea>
+                           <textarea name="message" class="form-control" placeholder="Write your message" required></textarea>
                         </div>
                      </div>
                      <div class="col-12">
@@ -469,11 +473,9 @@
 
                   <!-- Footer Nav -->
                   <ul class="footer-nav">
-                     <li><a href="#">About Us</a></li>
-                     <li><a href="#">Our Team</a></li>
-                     <li><a href="#">Pricing Plans</a></li>
-                     <li><a href="#">Blogs</a></li>
-                     <li><a href="#">Contact Us</a></li>
+                     <li><a href="about-us.html">About Us</a></li>
+                     <li><a href="index.html#key-offerings">Our Products</a></li>
+                     <li><a href="about-us.html#contact-us">Contact Us</a></li>
                   </ul>
                </div>
             </div>
@@ -485,26 +487,10 @@
 
                   <!-- Footer Nav -->
                   <ul class="footer-nav">
-                     <li><a href="#">UI/UX Design</a></li>
-                     <li><a href="#">App Development</a></li>
-                     <li><a href="#">Digital Marketing</a></li>
-                     <li><a href="#">Web Development</a></li>
-                     <li><a href="#">Cyber Security</a></li>
-                  </ul>
-               </div>
-            </div>
-
-            <!-- Footer Card -->
-            <div class="col-12 col-sm-6 col-lg">
-               <div class="footer-card">
-                  <h5 class="mb-4">Information</h5>
-
-                  <!-- Footer Nav -->
-                  <ul class="footer-nav">
-                     <li><a href="#">Working Process</a></li>
-                     <li><a href="#">Privacy Policy</a></li>
-                     <li><a href="#">Terms &amp; Conditions</a></li>
-                     <li><a href="#">Faqs</a></li>
+                     <li><a href="index.html#key-offerings">Enterprise IT Products</a></li>
+                     <li><a href="index.html#key-offerings">POS & Retail Solutions</a></li>
+                     <li><a href="index.html#key-offerings">Identification Systems</a></li>
+                     <li><a href="index.html#key-offerings">Networking Solutions</a></li>
                   </ul>
                </div>
             </div>
